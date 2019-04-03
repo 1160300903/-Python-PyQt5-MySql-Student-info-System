@@ -119,7 +119,7 @@
      <string>性别</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="stu_gender">
+   <widget class="QTextEdit" name="stu_sex">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -139,7 +139,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextEdit" name="stu_school">
+   <widget class="QTextEdit" name="stu_dept">
     <property name="geometry">
      <rect>
       <x>500</x>

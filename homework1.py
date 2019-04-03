@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'D:\大学作业资料\大3下-数据库系统\homework1.ui'
+# Form implementation generated from reading ui file 'D:\大学作业资料\大3下-数据库系统\homework1\homework1.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
@@ -41,15 +41,15 @@ class Ui_MainWindow(object):
         self.check_sex = QtWidgets.QCheckBox(self.centralwidget)
         self.check_sex.setGeometry(QtCore.QRect(20, 210, 91, 19))
         self.check_sex.setObjectName("check_sex")
-        self.stu_gender = QtWidgets.QTextEdit(self.centralwidget)
-        self.stu_gender.setGeometry(QtCore.QRect(90, 210, 121, 31))
-        self.stu_gender.setObjectName("stu_gender")
+        self.stu_sex = QtWidgets.QTextEdit(self.centralwidget)
+        self.stu_sex.setGeometry(QtCore.QRect(90, 210, 121, 31))
+        self.stu_sex.setObjectName("stu_sex")
         self.stu_class = QtWidgets.QTextEdit(self.centralwidget)
         self.stu_class.setGeometry(QtCore.QRect(500, 30, 121, 31))
         self.stu_class.setObjectName("stu_class")
-        self.stu_school = QtWidgets.QTextEdit(self.centralwidget)
-        self.stu_school.setGeometry(QtCore.QRect(500, 90, 121, 31))
-        self.stu_school.setObjectName("stu_school")
+        self.stu_dept = QtWidgets.QTextEdit(self.centralwidget)
+        self.stu_dept.setGeometry(QtCore.QRect(500, 90, 121, 31))
+        self.stu_dept.setObjectName("stu_dept")
         self.stu_address = QtWidgets.QTextEdit(self.centralwidget)
         self.stu_address.setGeometry(QtCore.QRect(500, 150, 121, 31))
         self.stu_address.setObjectName("stu_address")

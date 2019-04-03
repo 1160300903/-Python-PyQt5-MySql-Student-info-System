@@ -6,7 +6,8 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from homework1 import Ui_MainWindow
 
-
+#TODO: 1.test the codes 2. change the icon of the main window
+#1.拼写错误2.变量名使用错误3.更改了数据表定义
 class MainWindow(QMainWindow,Ui_MainWindow):
     def __init__(self,parent = None):
         super(MainWindow, self).__init__(parent)
@@ -16,7 +17,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         db=MySQLdb.connect(host="localhost",user="root",passwd="19980623ms",db="stu_info", charset='utf8') 
         cursor = db.cursor()
 
-        str_temp = "select * from stu_info where "
+        str_temp = "select * from student where "
         first_flag = False
         if self.check_id.isChecked() and len(self.stu_id.toPlainText().strip()) > 0:
             str_temp += "(Sid like '" + self.stu_id.toPlainText().strip() + "')"
@@ -47,7 +48,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
             if first_flag:
                 str_temp += "and(Sdept='" + self.stu_dept.toPlainText().strip() + "')"
             else:
-                str_temp += "(Sdept='" + self.stu_dpet.toPlainText().strip() + "')"
+                str_temp += "(Sdept='" + self.stu_dept.toPlainText().strip() + "')"
                 first_flag = True
 
         if self.check_address.isChecked() and len(self.stu_address.toPlainText().strip()) > 0:
@@ -65,6 +66,8 @@ class MainWindow(QMainWindow,Ui_MainWindow):
                 first_flag = True
             if len(self.stu_high_age.toPlainText().strip()) > 0 and int(self.stu_high_age.toPlainText().strip()) > int(self.stu_low_age.toPlainText().strip()):
                        str_temp += "and(Sage<=" + self.stu_high_age.toPlainText().strip() + ")"   
+        if not first_flag:
+            str_temp = str_temp[:-6]
         print(str_temp)
         cursor.execute(str_temp)
         results = cursor.fetchall()
